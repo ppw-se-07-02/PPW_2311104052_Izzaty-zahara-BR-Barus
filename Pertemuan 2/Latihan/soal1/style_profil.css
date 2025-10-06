@@ -1,0 +1,104 @@
+/* STYLE DASAR */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* HEADER */
+header {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* MENU NAVIGASI */
+nav {
+    background-color: #3cb371;
+    text-align: right;
+    padding: 10px 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: #dfffd6;
+}
+
+/* BAGIAN KONTEN — GRID 3 KOLOM */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    gap: 20px;
+    padding: 20px;
+}
+
+/* KOLOM POPULER */
+.populer {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.populer img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* KOLOM KONTEN DINAMIS */
+.konten {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* KOLOM IKLAN */
+.iklan {
+    background-color: #e6ffe6;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.iklan img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.iklan a {
+    color: #2e8b57;
+    font-weight: bold;
+    text-decoration: none;
+}
+.iklan a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr; 
+    }
+
+    nav {
+        text-align: center;
+    }
+}

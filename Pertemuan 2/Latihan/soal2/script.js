@@ -1,10 +1,15 @@
 const content = document.getElementById("content-area");
+// Baris ini mengambil elemen HTML yang memiliki id="content-area" dan menyimpannya ke dalam variabel bernama content.
 
 function loadContent(page) {
+  // Ini mendefinisikan sebuah fungsi bernama loadContent dengan parameter bernama page
   content.style.opacity = 0;
+  // Baris ini mengubah gaya CSS (style) dari elemen dengan id content-area
 
   setTimeout(() => {
+    // Jalankan kode di dalam { ... } setelah 200 milidetik (0.2 detik).
     if (page === "dashboard") {
+      // mengganti seluruh isi dari elemen <main id="content-area"> dengan konten baru yang ditulis di dalam tanda backtick (`).
       content.innerHTML = `
         <h2>Dashboard Admin Panda</h2>
         <p>Berikut ringkasan aktivitas terkini dari sistem Panda Corp.</p>
@@ -90,7 +95,9 @@ function loadContent(page) {
     }
 
     content.style.opacity = 1;
+    // Setelah isi konten baru sudah diganti (innerHTML), baris ini mengubah opacity dari 0 menjadi 1.
   }, 200);
+  // Bagian ini menutup fungsi setTimeout() yang dimulai tadi.
 }
 
 // Hubungkan menu
@@ -99,3 +106,4 @@ document.getElementById("menu-datauser").addEventListener("click", () => loadCon
 document.getElementById("menu-produk").addEventListener("click", () => loadContent("produk"));
 document.getElementById("menu-password").addEventListener("click", () => loadContent("password"));
 document.getElementById("menu-logout").addEventListener("click", () => loadContent("logout"));
+// Kode itu bikin tiap tombol menu (dashboard, data user, produk, password, logout) bisa ganti isi halaman utama tanpa reload.

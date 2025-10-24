@@ -1,15 +1,18 @@
 body {
+  /* Menampilkan tampilan dasar halaman web */
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: #fdfcf5;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi4Q7pdHIExWYRRM9SyUa020cFeso527HRwg&s');
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: bottom right; 
+  /* Menempatkan gambar di pojok kanan bawah. */
   background-size: 220px;
 }
 
 /* Grid utama */
 .container {
+  /* Menjadi wadah utama (layout keseluruhan) yang menggunakan CSS Grid untuk membagi halaman */
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 220px 1fr;
@@ -25,6 +28,8 @@ body {
 
 /* Header */
 header {
+  /* Menampilkan bagian kepala halaman (judul utama/dashboard).
+Biasanya berisi teks besar seperti “Dashboard Admin” atau “Sistem Informasi”. */
   grid-area: header;
   background-color: #a8d5ba;
   color: #2f4858;
@@ -38,6 +43,7 @@ header {
 
 /* Menu */
 nav {
+  /* Area navigasi (menu kiri) */
   grid-area: menu;
   background-color: #e6f4ea;
   padding: 20px;
@@ -45,15 +51,18 @@ nav {
 }
 
 nav ul {
+  /* Mengatur daftar menu */
   list-style: none;
   padding: 0;
 }
 
 nav li {
+  /* Memberi jarak antar-item menu agar tidak terlalu rapat */
   margin-bottom: 15px;
 }
 
 nav a {
+  /* Mengatur tampilan tautan menu */
   text-decoration: none;
   color: #2f4858;
   font-weight: bold;
@@ -66,12 +75,14 @@ nav a {
 }
 
 nav a:hover {
+  /* Saat kursor diarahkan ke menu */
   background-color: #aed581;
   transform: scale(1.05);
 }
 
 /* Konten utama */
 main {
+  /* Area utama yang menampilkan isi halaman */
   grid-area: content;
   padding: 30px;
   background-color: #fffbea;
@@ -81,6 +92,7 @@ main {
 
 /* Footer */
 footer {
+  /* Menampilkan bagian bawah halaman, biasanya teks hak cipta atau informasi tambahan. */
   grid-area: footer;
   text-align: center;
   padding: 10px;
@@ -91,6 +103,7 @@ footer {
 
 /* --- Dashboard Cards --- */
 .dashboard-cards {
+  /* Menyusun beberapa kartu kecil (card) secara grid fleksibel. */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
@@ -98,6 +111,7 @@ footer {
 }
 
 .card {
+  /* Kotak ringkasan data (misalnya jumlah pengguna, total barang). */
   background-color: #e6f4ea;
   border-radius: 12px;
   padding: 20px;
@@ -108,11 +122,13 @@ footer {
 }
 
 .card:hover {
+  /* Saat diarahkan kursor, warna jadi sedikit lebih terang dan card naik sedikit. */
   background-color: #d5eddb;
   transform: translateY(-5px);
 }
 
 .card h3 {
+  /* Judul card berwarna gelap, sedangkan angka atau isi utamanya besar dan berwarna hijau tua. */
   color: #2f4858;
   margin-bottom: 10px;
 }
@@ -124,6 +140,7 @@ footer {
 }
 
 .chart {
+  /* Area untuk menampilkan grafik visual sederhana dengan latar gradasi hijau muda. */
   margin-top: 25px;
   height: 150px;
   background: linear-gradient(to top, #c5e1a5 20%, #f6f9f4 80%);
@@ -133,6 +150,7 @@ footer {
 }
 
 .chart::after {
+  /* Menambahkan garis bergerak animasi di bawah grafik agar terlihat dinamis. */
   content: "";
   position: absolute;
   bottom: 0;
@@ -144,6 +162,7 @@ footer {
 }
 
 @keyframes slide {
+  /* Animasi yang membuat garis di grafik melebar dan menyempit secara berulang. */
   0% { width: 10%; }
   50% { width: 70%; }
   100% { width: 10%; }
@@ -151,22 +170,26 @@ footer {
 
 /* Tabel & Form */
 .table-style {
+  /* Mengatur tabel agar rapi, melebar penuh, dan tidak ada jarak antar garis. */
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
 .table-style th, .table-style td {
+  /* Menambahkan garis pembatas tabel, jarak isi, dan rata kiri. */
   border: 1px solid #b6d7a8;
   padding: 10px;
   text-align: left;
 }
 
 .table-style th {
+  /* Header tabel diberi warna hijau muda agar beda dari isi. */
   background-color: #c5e1a5;
 }
 
 form {
+  /* Area input data (formulir). */
   max-width: 400px;
   background-color: #f6f9f4;
   padding: 20px;
@@ -175,12 +198,14 @@ form {
 }
 
 form label {
+  /* Menampilkan label setiap input agar sejajar ke bawah dan mudah dibaca. */
   display: block;
   margin-top: 10px;
   font-weight: bold;
 }
 
 form input, form select {
+  /* Mengatur kotak isian agar penuh satu baris, rapi, dan halus di tepi. */
   width: 100%;
   padding: 8px;
   margin-top: 5px;
@@ -189,6 +214,7 @@ form input, form select {
 }
 
 form button {
+  /* Tombol untuk mengirim data (Submit). */
   margin-top: 15px;
   background-color: #a8d5ba;
   border: none;
@@ -199,5 +225,6 @@ form button {
 }
 
 form button:hover {
+  /* Saat diarahkan kursor, warnanya sedikit lebih gelap agar terlihat aktif. */
   background-color: #91c7a5;
 }

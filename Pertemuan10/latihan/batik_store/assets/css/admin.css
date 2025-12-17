@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f6fb;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #5e2b97;
+  margin-bottom: 20px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  background: #7f39fb;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #a06cff;
+}
+
+.btn-add {
+  background: #2ecc71;
+}
+
+.btn-add:hover {
+  background: #27ae60;
+}
+
+.btn-back {
+  background: #95a5a6;
+}
+
+.btn-back:hover {
+  background: #7f8c8d;
+}
+
+.btn-edit {
+  background: #3498db;
+}
+
+.btn-delete {
+  background: #e74c3c;
+}
+
+/* ===== SEARCH & TOP ===== */
+.top-action {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.top-action form {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #5e2b97;
+  color: #fff;
+  padding: 10px;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+  background: #f1ecff;
+}
+
+.action a {
+  margin-right: 6px;
+}
+
+/* ===== FORM ===== */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
